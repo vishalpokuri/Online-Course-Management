@@ -15,8 +15,8 @@
     <span>Online Course management</span>
     <button id="logout" class="button" style="padding: 10px;" onclick="return goback()">Logout</button>
   </header>
-  <div id="main-container">
-    <div id="menu">
+  <div id="main-container" class="duller">
+    <div id="menu" class="duller">
       <ul> <br> <br> <br>
         <button class="menu-button " id="post_new_course">
           <svg width="20%" height="70%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@
     <div class="intro-course" id="intro">
 
       <div style="margin: 50px;"></div>
-      <div class="new-course-form">
+      <div class="new-course-form bright">
         <h3>⚠️ Access menu buttons on the left to get started</h3>
 
       </div>
@@ -59,7 +59,7 @@
         <h3>Available courses</h3>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Capacity</th>
@@ -72,7 +72,7 @@
         </table>
       </div>
       <div style="margin: 50px;"></div>
-      <div class="new-course-form">
+      <div class="new-course-form bright">
         <h3>Post A New Course</h3>
         <form action="#" onsubmit="return append()">
           <div class="input-fields">
@@ -114,7 +114,7 @@
         <h3>Available courses</h3>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Capacity</th>
@@ -127,9 +127,9 @@
         </table>
       </div>
       <div style="margin: 50px;"></div>
-      <div class="delete-form">
+      <div class="delete-form bright">
         <h3>Delete course</h3>
-        <div class="delete-container">
+        <div class="delete-container ">
           <p>Choose the course title to delete</p>
           <select name="" id="delete-select" style="width: 200px;">
           </select>
@@ -142,9 +142,9 @@
     </div>
     <!-- Registered students -->
     <div class="registered-users hidden" id="three">
-      <div class="registered-form">
+      <div class="registered-form bright">
         <h3>Registered Users Check</h3>
-        <div class="delete-container">
+        <div class=" delete-container">
           <p>Choose the course title for students list</p>
           <select name="" id="register-select" style="width: 200px;">
           </select>
@@ -159,7 +159,7 @@
         <h3>Student list</h3>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Reg Number</th>
               <th>Student Name</th>
               <th>Course Name</th>

@@ -15,7 +15,7 @@
     <span>Online Course management</span>
     <button id="logout" class="button" style="padding: 10px;" onclick="return goback()">Logout</button>
   </header>
-  <div id="main-container">
+  <div id="main-container" class="duller">
     <div id="menu">
       <ul> <br> <br> <br>
         <button class="menu-button" id="my_course">
@@ -74,7 +74,7 @@
     <div class="intro-course" id="intro">
 
       <div style="margin: 50px;"></div>
-      <div class="new-course-form">
+      <div class="new-course-form bright">
         <h3>⚠️ Access menu buttons on the left to get started</h3>
 
       </div>
@@ -98,7 +98,7 @@
         </div>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Graded/Non-graded</th>
@@ -116,7 +116,7 @@
         <h3>Available courses to Register</h3>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Capacity</th>
@@ -129,7 +129,7 @@
         </table>
       </div>
       <div style="margin: 100px;"></div>
-      <div class="register-dropdown">
+      <div class="register-dropdown bright">
         <h3>Registration Section</h3>
         <div class="delete-container">
           <p>Choose a course to register</p>
@@ -145,14 +145,10 @@
     <!-- 3. Drop Course -->
     <div class="deleteCourse hidden" id="three">
       <div class="avl-courses">
-
-
         <h3>Registered courses</h3>
-
-
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Credits</th>
@@ -163,9 +159,9 @@
         </table>
       </div>
       <div style="margin: 100px;"></div>
-      <div class="drop-form">
+      <div class="drop-form bright">
         <h3>Drop a course</h3>
-        <div class="delete-container">
+        <div class=" delete-container">
           <p>Choose the course title to delete</p>
           <select name="" id="drop-select" style="width: 200px;">
           </select>
@@ -182,7 +178,7 @@
         <h3>Completed Courses</h3>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Grade</th>
@@ -195,7 +191,7 @@
       </div>
       <div style="margin: 25px;"></div>
       <!-- Current estimated Gpa -->
-      <div class="drop-form">
+      <div class="drop-form bright">
         <h3>Current Estimated GPA</h3>
         <div style="display: grid; place-items: center;">
           <span id="gpa" style="font-size: 50px; font: 100;"></span>
@@ -214,7 +210,7 @@
         <h3>Payments</h3>
         <table id="tablecontainer">
           <thead>
-            <tr>
+            <tr class="bright">
               <th>Course Name</th>
               <th>Course Code</th>
               <th>Price</th>
