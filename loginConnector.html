@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Buddy</title>
+  <link rel="stylesheet" href="loginConnector.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+
+<body>
+  <div id="whole-container" class="">
+    <div class="onlinec"><span>Online Course Management</span></div>
+    <div class="loginpage">
+      <div class="form-container">
+        <div class="buttoncontainer">
+          <button class="buttonselector button" type="button" data-title="Admin" id="adminButton">Admin</button>
+          <button class="buttonselector button" type="button" data-title="Student" id="studentButton">Student</button>
+
+        </div>
+        <p class="title" id="logintitle"> Student Login</p>
+
+        <!-- Login form -->
+        <form class="form" action="#" onsubmit="return validate()">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="">
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="">
+            <div class="forgot">
+              <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+            </div>
+          </div>
+          <button class="sign button" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let selected = "Student";
+    const selectbuttons = document.querySelector('.buttoncontainer');
+    const buttons = selectbuttons.querySelectorAll('button');
+    buttons.forEach(button => button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const buttonTitle = this.dataset.title;
+      selected = this.dataset.title
+      document.getElementById('logintitle').innerText = `${buttonTitle} Login`
+
+    }));
+
+
+    const innerform = document.querySelector('.form');
+
+    function validate() {
+      console.log("Validate function called");
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check if username and password are not equal
+      if (username !== password) {
+        alert("Invalid credentials");
+        console.log("Invalid credentials");
+        return false;
+      }
+
+      // Check if selected role is student
+      if (username === "student1" && selected === "Student") {
+        document.getElementById('whole-container').classList.add('hidden');
+        window.location.href = './Pages-student/studentOnePage.html';
+        console.log(studentData)
+        return false;
+      }
+
+      // Check if selected role is admin
+      if (username === "admin" && selected === "Admin") {
+        document.getElementById('whole-container').classList.add('hidden');
+        window.location.href = './Pages-admin/adminOnePage.html';
+        console.log(studentData)
+        return false;
+      }
+
+      // If none of the conditions above are met, display error message
+      alert("Account doesn't Exist / Invalid credentials");
+      return false;
+    }
+    //Button change
+    const adminButton = document.getElementById('adminButton');
+    const studentButton = document.getElementById('studentButton');
+    adminButton.addEventListener('click', () => {
+      toggleButton(adminButton);
+    });
+
+    studentButton.addEventListener('click', () => {
+      toggleButton(studentButton);
+    });
+
+    // Function to toggle the selected state of the button
+    function toggleButton(button) {
+      // Remove the 'buttonselected' class from all buttons
+      document.querySelectorAll('.buttonselector').forEach(btn => {
+        btn.classList.remove('buttonselected');
+      });
+
+      // Add the 'buttonselected' class to the clicked button
+      button.classList.add('buttonselected');
+    }
+  </script>
+  <script src="../availabledata.js"></script>
+</body>
+
+</html>

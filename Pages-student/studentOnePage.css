@@ -1,0 +1,187 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  height: 8vh;
+  font-size: large;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.41);
+}
+#logout {
+  position: absolute;
+  left: 90vw;
+}
+.button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #404040;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: transform 0.2s ease;
+}
+.button:hover {
+  transform: translateY(-5px);
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+#menu {
+  grid-area: 1/1/11/3;
+  border-right: 1px solid rgba(0, 0, 0, 0.41);
+  align-items: center;
+}
+
+.menu-button {
+  border: 2px solid transparent; /* Added border style */
+  background-color: transparent;
+  font-size: large;
+  width: 90%;
+  height: 40px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  text-align: center;
+  display: flex; /* Added display: flex */
+  justify-content: center; /* Added align-items: center */
+  align-items: center;
+}
+.menu-button:hover {
+  transform: translateY(-5px);
+  border-color: #512da8;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button:active {
+  transform: translateY(5px);
+  border-color: #4527a0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.menu-button:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.myCourse,
+.registerCourse,
+.deleteCourse,
+.completedCourses,
+.payments {
+  grid-area: 1/3/11/11;
+  margin: 20px 100px 50px 100px;
+}
+
+.user_details {
+  width: 100%;
+  height: 35vh;
+  background-color: #9c9a9a93;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#profile-image {
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  height: 70%;
+  border-radius: 20000rem;
+}
+
+table,
+tr,
+th,
+td {
+  border-collapse: collapse;
+  border: 2px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+.register-dropdown,
+.drop-form {
+  border: 1px solid #404040;
+  border-radius: 5px;
+  padding: 10px 20px 20px 20px;
+}
+.delete-container {
+  display: flex;
+  justify-content: space-around;
+}
+#delete-button {
+  border: transparent;
+  /* background-color: grey; */
+  width: 120px;
+  height: 50px;
+}
+
+.messageColorAdderGreen {
+  background-color: #95b46a;
+}
+.messageColorAdderRed {
+  background-color: #e53d00da;
+}
+
+.avl-courses h3 {
+  font-size: 30px;
+}
+
+.unpaid_message_container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+.unpaid_message_container p {
+  width: 25vw;
+  border: 1px solid red;
+  border-radius: 5px;
+  align-content: center;
+  padding: 10px;
+  color: red;
+}
+
+.new-course-form {
+  border: 1px solid #404040;
+  border-radius: 5px;
+  padding: 10px 20px 20px 20px;
+}
+
+.intro-course {
+  grid-area: 1/3/11/11;
+  margin: 25px 100px 50px 100px;
+}
+
+.loggedinas {
+  position: absolute;
+  left: -100%; /* Start off-screen to the left */
+  font-size: small;
+  font-weight: 400;
+  background-color: rgba(128, 128, 128, 0.322);
+  padding: 5px;
+  border-radius: 5px;
+  transition: left 0.5s ease-out;
+}
+
+.loggedinas.active {
+  left: 5vh; /* Move to the desired position */
+}
